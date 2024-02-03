@@ -22,7 +22,7 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 cassio.init(token=ASTRA_DB_APP_TOKEN,database_id=ASTRA_DB_ID)
 
 # Create the LangChain embedding and LLM objects
-llm = OpenAI(openai_api_key=OPENAI_API_KEY,model='gpt-3.5-turbo')
+llm = OpenAI(openai_api_key=OPENAI_API_KEY,model_name="gpt-3.5-turbo-instruct")
 embedding = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 
 # Create your LangChain vector store
