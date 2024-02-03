@@ -12,7 +12,7 @@ import os
 load_dotenv()
 
 st.set_page_config(page_title="Chatbot de droit fiscal Marocain")
-st.header("Salam, c'est votre Assistant en Droit Fiscal 🇲🇦")
+st.header("Votre Assistant en Loi Fiscal 🇲🇦")
 
 ASTRA_DB_ID = os.getenv('ASTRA_DB_ID')
 ASTRA_DB_APP_TOKEN = os.getenv('ASTRA_DB_APP_TOKEN')
@@ -22,8 +22,8 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 cassio.init(token=ASTRA_DB_APP_TOKEN,database_id=ASTRA_DB_ID)
 
 # Create the LangChain embedding and LLM objects
-llm = OpenAI(openai_api_key=OPENAI_API_KEY)
-embedding = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
+llm = OpenAI(openai_api_key=OPENAI_API_KEY,model='gpt-3.5-turbo')
+embedding = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY,model='text-embedding-3-large')
 
 # Create your LangChain vector store
 vector_store = Cassandra(
