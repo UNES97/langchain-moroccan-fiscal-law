@@ -12,7 +12,7 @@ import os
 load_dotenv()
 
 st.set_page_config(page_title="Loi fiscal Marocain")
-st.header("Votre Référence Fiscale Maroc 🤖🇲🇦")
+st.header("Votre Référence Fiscale Maroc 🤖🇲🇦✨")
 
 ASTRA_DB_ID = os.getenv('ASTRA_DB_ID')
 ASTRA_DB_APP_TOKEN = os.getenv('ASTRA_DB_APP_TOKEN')
