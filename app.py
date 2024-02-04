@@ -38,10 +38,10 @@ def get_response(question):
     answer = vector_store_index.query(question,llm=llm).strip()
     return answer
 
-input = st.text_input("Input: ",key="input")
+input = st.text_input("Question : ",key="input")
 response = get_response(input)
 
-submit = st.button("Posez-moi une Question")
+submit = st.button("Envoyer")
 
 ## Ask button is Clicked
 if submit:
