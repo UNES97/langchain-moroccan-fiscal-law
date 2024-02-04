@@ -16,7 +16,7 @@ st.header("Votre Assistant en Loi Fiscal 🇲🇦")
 
 ASTRA_DB_ID = os.getenv('ASTRA_DB_ID')
 ASTRA_DB_APP_TOKEN = os.getenv('ASTRA_DB_APP_TOKEN')
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENAI_API_KEY = os.getenv('OPENAI_API_TOKEN')
 
 # Init Connection to the DB
 cassio.init(token=ASTRA_DB_APP_TOKEN,database_id=ASTRA_DB_ID)
